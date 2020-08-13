@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>sa.com.sbm.ssva</groupId>
+        <artifactId>ssva</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>integration</artifactId>
+    <packaging>war</packaging>
+
+    <name>SSVA (integration)</name>
+    <description>Integration module for SBM Support Virtual Agent (SSVA). It connects the chatbot with various external
+        systems.
+    </description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <artifactId>spring-boot-starter-mail</artifactId>
+            <groupId>org.springframework.boot</groupId>
+        </dependency>
+        <dependency>
+            <groupId>sa.com.sbm.ssva</groupId>
+            <artifactId>commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- database -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>fi.solita.clamav</groupId>
+            <artifactId>clamav-client</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>4.0</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
